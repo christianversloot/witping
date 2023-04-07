@@ -22,7 +22,7 @@ class Mesh:
         self.config = self.load_configuration()
 
 
-    def load_configuration(self) -> MeshConfig
+    def load_configuration(self) -> MeshConfig:
         '''
             Load configuration from environment or JSON file.
             Initially (and recommended from production), configuration is
