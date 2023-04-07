@@ -9,7 +9,7 @@ class Mesh:
         Pings subsequently perform an action based on the Wit firing.
         The Mesh orchestrates everything.
     '''
-    slots = ['config']
+    __slots__ = ['config']
 
     def __init__(self) -> None:
         '''
