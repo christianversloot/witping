@@ -28,7 +28,7 @@ class Mesh:
             Initially (and recommended from production), configuration is
             loaded from environment variable (WITPING_CONFIGURATION). If
             unavailable, WitPing attempts to load configuration from a file
-            called configuration.json in the current working directory.
+            called configuration.json in the root directory.
 
             Attributes
             ----------
@@ -45,7 +45,7 @@ class Mesh:
         if env_configuration is not None:
             return json.loads(env_configuration)
 
-        env_path = os.path.join(os.getcwd(), 'configuration.json')
+        env_path = os.path.join(os.getcwd(), '..', 'configuration.json')
 
         with open(env_path, 'r') as env_config_file:
             return json.load(env_config_file)
